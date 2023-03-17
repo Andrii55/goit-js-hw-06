@@ -3,11 +3,11 @@ const refs = {
   outputEll: document.querySelector("#name-output"),
 };
 
-refs.inputEll.addEventListener("input", () => {
-  const nameEll = refs.inputEll.value.trim();
+refs.inputEll.addEventListener("input", (event) => {
+  const nameEll = event.target.value.trim();
   if (nameEll === "") {
-    refs.outputEll.textcontent = "Anonimous";
+    refs.outputEll.textContent = "Anonimous";
   } else {
     refs.outputEll.textContent = nameEll;
   }
-});
+}); 
